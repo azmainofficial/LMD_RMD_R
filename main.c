@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 
-void LMD(char str[], int size){
+void LeftmostDerivation(char str[], int size){
     char virtual_str[size];
     strcpy(virtual_str, str);
     printf("LMD :\n");
@@ -19,7 +19,7 @@ void LMD(char str[], int size){
 
     }
 }
-void RMD(char str[], int size){
+void RightmostDerivation(char str[], int size){
     printf("RMD :\n");
     int counter = 0;
     Jump:
@@ -38,10 +38,10 @@ void RMD(char str[], int size){
 int main(){
     char str[] = {};
 
-    printf("Enter The Context Free Grammer : ");
+    printf("Enter The Context Free Grammer S -> ");
     scanf("%s",&str);
-    LMD(str, strlen(str));
-    RMD(str, strlen(str));
+    LeftmostDerivation(str, strlen(str));
+    RightmostDerivation(str, strlen(str));
     free(str);
     return 0;
 }
